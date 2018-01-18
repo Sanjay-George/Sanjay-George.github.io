@@ -1,0 +1,59 @@
+@media screen and (max-width:600px){
+    
+    /*----------HEADER----------------------------*/
+    header{
+        background: radial-gradient(#6ab0de ,black 95%); 
+    }
+    header h3{
+        font-size: 140%;
+    }
+    header h5{
+        font-size: 80%;
+    }
+    header h4{
+        font-size:75%;
+    }
+    header ul li{
+        font-size:70%;
+    }
+    header img{
+        height:140px;
+    }
+    header .card-panel{
+        height:300px;
+    }
+    header .icons{
+        font-size:150%;
+        height: auto;
+    }
+    /*-------------END OF HEADER SECTION---------*/
+    
+    
+}
+
+@media screen and (min-width:601px) and (max-width:992px){
+    /*----------HEADER----------------------------*/
+    header h3{
+        font-size: 155%;
+    }
+    header h5{
+        font-size: 90%;
+    }
+    header h4{
+        font-size:85%;
+    }
+    header ul li{
+        font-size:80%;
+    }
+    header img{
+        height:150px;
+    }
+    header .card-panel{
+        height:300px;
+    }
+    header .icons{
+        font-size:160%;
+        height: auto;
+    }
+    /*-------------END OF HEADER SECTION---------*/
+}

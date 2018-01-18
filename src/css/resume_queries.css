@@ -1,0 +1,401 @@
+/*====================LANDSCAPE==========================*/
+/**--------------------upto 600px-------------------------**/
+@media screen and (max-width:600px) and (orientation:landscape){
+    
+    #header{
+        background : linear-gradient(to bottom,rgba(255, 255, 255, 0.63),rgba(255, 255, 255, 0.47) 75%,#000),url('../images/back2-ph.jpg');
+        background-size: cover;
+        background-position :bottom;
+        transition: height 0.3s;
+        height: auto;
+    }
+    .main-info{
+       left:0;
+        top:20vh;
+        width:100vw;
+    
+    }
+    h3{
+        font-size:160%;
+        margin-left:auto;
+        margin-right:auto;
+        text-align: center;
+        width:100%;
+    }
+    .small-h3{
+        font-size:100%;
+        padding-left:0px;
+    }
+    .social{
+        bottom:20vh;
+        left:40vw;
+    }
+    .social ul li{
+        font-size: 100%;
+        
+    }
+    .social a{
+        padding: 0 10px;
+    }
+    .personal-info{
+        background:linear-gradient(to top,#e5e3e3,rgba(216, 216, 216, 0.71)  ,rgb(0, 0, 0) 80%);
+        background-size:cover;
+        background-attachment: fixed;
+        height:auto;
+       
+        
+    }
+    .personal-info .card{
+        height:auto;
+    }
+    #common h5 { font-size: 250%;}
+    #common a { font-size : 70%; padding : 0 25px !important}
+    #common .point p { font-size : 80%}
+    
+}
+
+/*-----------------------601 to 992 px--------------------------*/
+@media screen and (min-width:601px) and (max-width:992px) and (orientation:landscape){
+    
+    #header{
+        background : linear-gradient(to bottom,rgba(255, 255, 255, 0.63),rgba(255, 255, 255, 0.47) 75%,#000),url('../images/back2-ph.jpg');
+        background-size: cover;
+        background-position :bottom;
+        transition: height 0.3s;
+        height : auto;
+    }
+    .main-info{
+       left:0;
+        top:8vh;
+        width:100vw;
+    
+    }
+    h3{
+        font-size:180%;
+        margin-left:auto;
+        margin-right:auto;
+        text-align: center;
+        width:100%;
+    }
+    .small-h3{
+        font-size:120%;
+        padding-left:0px;
+    }
+    .social{
+        bottom:25vh;
+        left:40vw;
+    }
+    .social ul li{
+        font-size: 120%;
+        
+    }
+    .social a{
+        padding: 0 20px;
+    }
+  
+    #common h5 { font-size: 250%;}
+    #common a { font-size : 70%; padding : 0 25px !important}
+    #common .point p { font-size : 80%}
+
+}
+/*=====================PORTRAIT===========================*/
+/**--------------------upto 600px-------------------------**/
+@media screen and (max-width:600px) and (orientation:portrait){
+   #header{
+        background : linear-gradient(to bottom,rgba(255, 255, 255, 0.63),rgba(255, 255, 255, 0.47) 75%,#000),url('../images/back2-ph.jpg');
+        background-size: cover;
+        background-position :bottom;
+        transition: height 0.3s;
+        height : auto ; 
+    }
+    .main-info{
+       left:0;
+        top:30vh;
+        width:100vw;
+    
+    }
+    h3{
+        font-size:180%;
+        margin-left:auto;
+        margin-right:auto;
+        text-align: center;
+        width:100%;
+    }
+    .small-h3{
+        font-size:100%;
+        padding-left:0px;
+    }
+    .social{
+        bottom:29vh;
+        left:30vw;
+    }
+    .social ul li{
+        font-size: 120%;
+        
+    }
+    .social a{
+        padding: 0 10px;
+    }
+   
+    #common h5 { font-size: 250%;}
+    #common a { font-size : 70%; padding : 0 25px !important}
+    #common .point p { font-size : 80%}
+    
+
+
+}
+
+/*-----------------------600 to 992 px--------------------------*/
+@media screen and (min-width:601px) and (max-width:992px) and (orientation:portrait){
+    body{
+        font-size:17px;
+    }
+    #header{
+        background : linear-gradient(to bottom,rgba(255, 255, 255, 0.63),rgba(255, 255, 255, 0.47) 75%,#000),url('../images/back2-ph.jpg');
+        background-size: cover;
+        background-position :bottom;
+        transition: height 0.3s;
+        height : auto;
+    }
+    .main-info{
+       left:0;
+        top:37vh;
+        width:100vw;
+    
+    }
+    h3{
+        font-size:250%;
+        margin-left:auto;
+        margin-right:auto;
+        text-align: center;
+        width:100%;
+    }
+    .small-h3{
+        font-size:150%;
+        padding-left:0px;
+    }
+    .social{
+        bottom:30vh;
+        left:30vw;
+    }
+    .social ul li{
+        font-size: 180%;
+        
+    }
+    .social a{
+        padding: 0 20px;
+    }
+   
+   
+}
+
+/**==================ABOVE 993PX======================*/
+
+@media screen and (min-width:993px) and (max-width:1300px){
+
+    body{
+        font-size:17px;
+    } 
+    .main-info{
+        top:37vh;
+        left:48vw;
+        width:100vw;
+    
+    }
+    h3{
+        font-size:250%;
+        white-space: nowrap;
+        overflow: hidden;
+        width: 20em;
+        width:100%;
+    }
+    .small-h3{
+        font-size:140%;
+        padding-left:120px;
+    }
+    .social{
+        bottom:27vh;
+        left:40vw;
+    }
+    .social ul li{
+        font-size: 160%;
+        
+    } 
+    #carousel img{
+        width:600px;
+        height:400px;
+    }
+    #carousel .app-slider{
+        transform: perspective(1000px) rotateY(0deg) translateY(400px);
+        position:relative;
+        top:40px;
+    }
+    .base{
+        position: relative;
+        top:70px;
+        left:5%;
+    }
+    #carousel .slides{
+        position:absolute;
+        top:107px;
+        left:14%;
+        width:500px;
+        cursor:pointer;
+    }
+    .slider img{
+        max-height: 325px;
+    }
+    #info-section h5{font-size:150%;}
+    #info-section h4{font-size:90%;}
+    .tabhome{right:-26px;top:250px}
+}
+
+@media screen and (min-width:1301px) and (max-width:1500px){
+    
+    body{
+        font-size:17px;
+    }
+    .main-info{
+          top:37vh;
+        left:48vw;
+        width:100vw;
+    
+    }
+    h3{
+        font-size:250%;
+        white-space: nowrap;
+        overflow: hidden;
+        width: 20em;
+        width:100%;
+    }
+    .small-h3{
+        font-size:140%;
+        padding-left:120px;
+    }
+    .social{
+        bottom:26vh;
+        left:40vw;
+    }
+    .social ul li{
+        font-size: 160%;
+        
+    }
+   
+    #carousel img{
+        width:700px;
+        height:500px;
+    }
+    #carousel .app-slider{
+        transform: perspective(1000px) rotateY(0deg) translateY(400px);
+        position:relative;
+        top:40px;
+    }
+    .base{
+        position: relative;
+        top:70px;
+        left:5%;
+    }
+    #carousel .slides{
+        position:absolute;
+        top:119px;
+        left:13%;
+        width:587px;
+        cursor:pointer;
+    }
+    .slider img{
+        max-height: 400px;
+    }
+    .tabhome{right:-26px;}
+    
+}
+@media screen and (min-width:1501px) and (max-width:1700px){
+    
+/*    DEFAULT WORKING RESOLUTION  */
+
+     .main-info{
+          top:37vh;
+        left:48vw;
+        width:100vw;
+    
+    }
+    h3{
+        font-size:250%;
+        white-space: nowrap;
+        overflow: hidden;
+        width: 20em;
+        width:100%;
+    }
+    .small-h3{
+        font-size:140%;
+        padding-left:120px;
+    }
+    .social{
+        bottom:22vh;
+        left:40vw;
+    }
+    .social ul li{
+        font-size: 160%;
+        
+    }
+    
+
+}
+
+/*=================ABOVE 1701PX FHD=====================*/
+@media screen and (min-width:1701px) and (max-width:2099px){
+    #carousel img{
+        width:800px;
+        height:600px;
+    }
+    #carousel .app-slider{
+        transform: perspective(1000px) rotateY(0deg) translateY(400px);
+        position:relative;
+        top:80px;
+    }
+    .base{
+        position: relative;
+        top:80px;
+        left:3%;
+    }
+    #carousel .slides{
+        position:absolute;
+        top:130px;
+        left:12%;
+        width:650px;
+        cursor:pointer;
+    }
+    .slider img{
+        max-height: 490px;
+    }
+    .tabhome{right:-10px;top:350px;height:60px;width:50px}
+}
+/*=============ABOVE 2100PX QHD=========================*/
+@media screen and (min-width:2100px){
+    body{
+        font-size : 25px;
+    }
+    #carousel img{
+        width:1080px;
+        height:800px;
+    }
+    #carousel .app-slider{
+        transform: perspective(1000px) rotateY(20deg);
+        position:relative;
+        top:20%;
+    }
+    .base{
+        position: relative;
+        top:80px;
+        left:3%;
+    }
+    #carousel .slides{
+        position:absolute;
+        top:140px;
+        left:12%;
+        width:880px;
+        cursor:pointer;
+    }
+    .slider img{
+        max-height: 660px;
+    }
+}

@@ -1,0 +1,644 @@
+/*$color = #2980b9;*/
+*{
+    /*outline:1px solid red;*/
+    
+}
+
+body{
+    font-size:17px;
+    overflow-x: hidden !important;
+    
+}
+.blur{
+    width:100%;
+    height:100%;
+/*    overflow: hidden;*/
+    z-index:999;
+    background-color: black;
+    opacity:.6;
+    position:fixed;
+    top:0px;
+}
+.scroll-lock{
+    overflow:hidden;
+}
+.row{
+    margin-bottom: 0;
+}
+
+.section{
+    height: 100vh;     
+}
+
+.tab-carousel{
+    background: linear-gradient(rgba(199, 199, 199, 0.38), #d2d2d2, #575656); 
+    background-position: center;
+    background-attachment: fixed;
+    z-index: 1;
+/*    background:#d2d2d2;*/
+    width:60%;
+    float:left;  
+}
+.fix-section{
+    position: fixed;
+    top:0px;
+    left:0px;
+}
+.scroll-section{
+    position:absolute;
+    top:0px;
+    left:0px;
+}
+
+.sec3{
+/* right section for tablet carousel, parent of sec4,5,6 in tab carousel */ 
+    width:40%;
+    float:right;
+    padding-top:0px;
+/*    background : #d2d2d2;*/
+    background: transparent;
+}
+.sec4,.sec5,.sec6{
+/* right visible sections tablet carousel as well as for phone carousel */
+/*    background: #030304; */
+/*    background: linear-gradient(to right, rgba(3, 3, 4, 0.91), rgba(3, 3, 4, 0.91)),url('../images/back6.jpg'); */
+/*        background: linear-gradient(#fffcfc, #d2d2d2 70%, #5498c6 99% );*/
+    background: linear-gradient(rgba(199, 199, 199, 0.38), #d2d2d2, #575656); 
+ 
+ 
+/*    background-position: center;*/
+/*    background-size: cover;*/
+    background-attachment: fixed;
+/*    background: linear-gradient(to left, rgba(69,72,77,1) 0%, rgba(0,0,0,1) 95%); */
+/*    background: #d2d2d2;*/
+    width:100%;
+    color:#000;
+    overflow-x: hidden;
+}
+
+.sec7{
+/* common section */
+/*    background: linear-gradient(to bottom, rgba(251, 251, 251, 0.94), rgba(233, 228, 228, 0.9), rgba(38, 118, 171, 0.6)),url('../images/back7-min.jpg');*/
+    background: linear-gradient(to top, rgba(232, 232, 232, 0.91), rgba(210, 210, 210, 0.9),#575656), url('../images/back7-min.jpg');
+    background-attachment: fixed; 
+    background-size : cover;
+}
+    
+}
+.sec-hide{
+/* hidden section for balancing tablet carousel */
+    background-color: transparent;
+}
+
+/*-----------------HEADER SECTION---------------------------*/
+#header{
+    height: 100vh;
+    background : linear-gradient(to bottom,rgba(255, 255, 255, 0),rgba(255, 255, 255, 0) 75%,#000),url('../images/back2.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+   
+}
+.main-info{
+    position: absolute;
+    color: black;
+    top:37vh;
+    left:48vw;
+     
+}
+.small-h3{
+    font-size:150%;
+    padding-left:120px;
+    color:#2676ab;
+    word-spacing: 3px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    margin-top: 0;
+}
+h3{
+    text-transform: uppercase;
+    font-size:250%;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 20em;
+    font-weight: 300;
+    margin-bottom: 10px;
+    word-spacing: 12px;
+}
+
+
+.blink{
+  animation: blink 1s infinite;
+}
+
+@keyframes blink{
+  to{opacity: .0;}
+}
+
+::selection{
+  background: black;
+}
+
+.social {
+    position : absolute;
+    bottom:17vh;
+    color: white;
+    left:50vw;
+    transform: skew(174deg,174deg);
+}
+.social ul li{
+    display: inline;
+    font-size:170%;
+}
+.social a{
+    color:#373f42;
+    transition:color .3s;
+    padding:0 20px;
+}
+.social a:hover{
+    color:#d6dfe5;
+}
+
+
+/*------------END OF HEADER SECTION---------------------*/
+
+/*-------------TABLET CAROUSEL SECTION------------------*/
+#carousel{
+    display: flex;
+    align-content: center;
+    padding:0px;
+
+}
+.carousel-container{
+    width:100%;
+    min-height:100%;
+    display: flex;
+    justify-content: center;
+/*    z-index: 1000;*/
+
+}
+#carousel img{
+    width:700px;
+    height:500px;
+}
+#carousel .app-slider{
+    transform: perspective(1000px) rotateY(0deg) translateY(400px);
+    position:relative;
+    top:69px;
+    transition: all 1s;
+
+
+}
+
+/*------ANIMATIONS FOR TAB CAROUSEL-----------*/
+
+@keyframes rotation{
+    0%{transform: perspective(1000px) rotateY(20deg) scale(1) ;}
+    50%{transform: perspective(1000px) rotateY(20deg) scale(1.1) ;}
+  100%{ transform: perspective(1000px) rotateY(0deg) scale(1.1);} 
+
+}
+
+@keyframes vibrate{
+  0%{transform: perspective(1000px) rotateY(20deg) translateY(0px);}
+  50%{transform: perspective(1000px) rotateY(20deg) translateY(-3px);}
+  100%{ transform: perspective(1000px) rotateY(20deg) translateY(0px);} 
+}
+
+/* STOP VIBRATE NOT USED */
+@keyframes stopvibrate{
+    0%{transform: perspective(1000px) rotateY(20deg)};
+    100%{transform: perspective(1000px) rotateY(0deg);};
+}
+
+/*@keyframes rotateback{
+    0%{transform: perspective(1000px) rotateY(0deg) };
+    100%{transform: perspective(1000px) rotateY(20deg)};
+}*/
+@keyframes rotateback{
+    100%{transform: perspective(1000px) rotateY(20deg) scale(1) ;}
+    50%{transform: perspective(1000px) rotateY(20deg) scale(1.1) ;}
+  0%{ transform: perspective(1000px) rotateY(0deg) scale(1.1);} 
+}
+
+.base{
+    position: relative;
+    top:70px;
+    /*z-index:1000;*/
+    /*visibility: visible;*/
+
+}
+#game-base{
+    transform : scale(1.1);
+}
+#carousel .slides{
+    position:absolute;
+    top:119px;
+    left:9%;
+    width:571px;
+    cursor:pointer;
+
+}
+.slider img{
+    width:570px;
+    max-height: 400px;
+
+}
+
+/*-------------------- TAB HOME BUTTON-----------------*/
+.tabhome{
+    position: absolute;
+    right : 10px;
+    top : 300px;
+    display: block;
+    height:50px;
+    width:40px;
+/*    background-color:yellow;*/
+    background-color: transparent;
+    cursor:pointer;
+    z-index:1000;
+    
+}
+/*----------------- TAB GAME SECTION-------------------*/
+@keyframes wakeup{
+    0%{opacity: 0};
+    100% {opacity : 1};
+}
+.tab-game-canvas{    /* size to be changed responsive */
+    width:300px;
+    height:200px;
+    background-color:#d5d5d5;
+    z-index : 1005 !important;
+}
+.tab-game-canvas h2{
+    font-family: 'Luckiest Guy', cursive;
+    position:relative;
+    top:20%;
+    animation: fadeIn2 1s ;
+    color : goldenrod;
+}
+.intro-holder{
+    width:100%;
+    height:100%;   
+}
+.intro-holder p{
+    position:relative;
+    top:20%;
+    left:50%;
+    transform: translateX(-50%);
+    width:80%;
+    color: #000;
+}
+.game-start-btn{
+    position : absolute;
+    bottom:20%;
+    left:50%;
+    transform: translateX(-50%);
+    background-color: goldenrod;
+    color: black; 
+    font-weight: 500;
+}
+.game-start-btn:hover, .game-start-btn:visited, .game-start-btn:active{
+    background-color: black;
+    color: goldenrod;
+}
+.shape {
+    display: none;
+    width:100px;
+    height:100px;
+    background-color : blue;
+    position: relative;
+    top:0px;
+    left:0px;
+    z-index:2000 !important;
+}
+.score-keep{
+    position: absolute;
+    top : 30%;
+    font-family: 'Luckiest Guy', cursive;
+    color : black;
+    font-size : 150%;
+    width:100%;
+}
+/*------------------MOB HOME  BUTTON -------------------*/
+.mobhome{
+    position : relative;
+    top : -50px;
+    left : 120px;
+    width : 60px;
+    height : 50px;
+/*    background-color : yellow;*/
+    background-color : transparent;
+    z-index : 2000;
+    cursor : pointer;
+}
+/*-----------------MOB GAME SECTION--------------------*/
+.ph-game-canvas{
+    width : 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.47), rgba(0, 0, 0, 0.47)),url('../images/back7-min.jpg');
+    background-size: cover;
+    background-position: bottom;
+    z-index : -1;
+}
+.ph-game-canvas .circle{
+    width : 160px;
+    height : 160px;
+    background-color : red;
+    border-radius: 50%;
+    position: absolute;
+    top : 50%;
+    left : 50%;
+    transform : translateX(-50%) translateY(-60%);
+    z-index : 1000;
+}
+.ph-game-canvas .stick{
+    width : 30px;
+    height : 200px;
+    background: linear-gradient(to left, #eeeeee 0%,#cccccc 100%);
+    position : absolute;
+    bottom : 0px;
+    left : 50%;
+    transform : translateX(-50%);
+    
+}
+.ph-game-canvas .rand{
+    top:40%;
+}
+/*---------------PHONE CAROUSEL SECTION-------------------*/
+.section.phone-carousel{
+    height:auto;
+    background-color : #9f9f9f;
+}
+.phone-carousel{
+    display: flex;
+    align-content: center;
+    padding:0px;
+    background-color:#000;
+    
+}
+.phone-carousel .carousel-container{
+    width:100%;
+    min-height:100%;
+    display: flex;
+    justify-content: center;
+    
+}
+.phone-carousel img{
+    width:300px;
+    height:520px;
+}
+.phone-carousel .app-slider{
+/*    transform: perspective(1000px) rotateY(20deg);*/
+    position:relative;
+    top:70px;
+}
+.phone-carousel .base{
+    position: relative;
+    top:20px;
+}
+.phone-carousel .slides{
+    position:absolute;
+    top:90px;
+    left:10%;
+    width:240px;
+    height:380px;
+    cursor:pointer;
+    overflow: hidden;
+}
+.phone-carousel .slider img{
+    min-height:100%;
+    width:auto;
+}
+/*----------------------------*/
+
+#info-section h5{
+    font-size : 160%;
+    font-weight:200;
+    color : #000;
+    transition: all .5s;
+}
+.info-sec ul li{
+    color:#2676ab;
+    transform: translateX(-1000px);
+    transition:all .5s;
+    margin-left:35px;
+    margin-bottom: 35px;
+}
+#info-section h5:hover{
+    transform: rotateX(30deg) translateY(-5px);
+}
+
+#info-section a{
+    color: #000;
+    cursor : pointer;
+}
+#info-section h4{
+    font-size : 100%;
+    letter-spacing: 3px;
+    word-spacing: 5px;
+    margin-bottom: 50px;
+    margin-left:30px;
+    text-transform: uppercase;
+}
+.app-list li{
+    margin-bottom: 40px;
+}
+.app-list p{
+    margin:0 !important;
+}
+
+.small-dev-section{
+    padding: 50px 20px !important;
+    text-align: center;
+    color:#000;
+    height : auto;
+    border-bottom: 1px solid #9f9f9f;
+}
+.small-dev-section h5{
+    font-size : 130%;
+    font-weight:200;
+}
+.small-dev-section h4{
+    font-size : 90%;
+    letter-spacing: 3px;
+    word-spacing: 5px;
+    margin: 10px 0;
+    text-transform: uppercase;
+}
+.small-dev-section p{
+    font-size : 89%;
+    color:#2676ab;
+}
+.small-dev-section a{
+    color:#000;
+    cursor: pointer;
+}
+.small-dev-section li{
+    margin-bottom: 40px;
+}
+.small-dev-section p{
+    margin:0 !important;
+}
+#skills-section{
+    left : 50%;
+}
+
+/*-----------INTERESTED SECTION---------------------*/
+#common{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    align-items: center;
+}
+#common h5{
+    font-size: 300%;
+    color:#000;
+    font-weight: 200;
+}
+#common a{
+    font-size:80%;
+    padding:0 30px !important;
+}
+#common .btn{
+    background-color:transparent !important;
+    color:#2676ab;
+    border: 1px solid #2676ab;
+    transition: all .3s;
+}
+#common .btn:hover{
+    color: #fff;
+    background-color: #2676ab !important;
+}
+#common .point{
+    width:100%;
+    text-align: center;
+}
+#common .point p{
+    color:#2676ab;
+    font-size:100%;
+    letter-spacing: 1px;
+/*    word-spacing : 1px;*/
+    margin-top:10px !important;
+}
+
+/*--------ANIMATIONS FOR INTERESTED SECTION---------*/
+@keyframes fadeIn{
+    0% { opacity:0; transform: translateY(10px);};
+    100% {opacity:1};
+}
+@keyframes fadeIn2{
+    0% { opacity:0;};
+    100% {opacity:1};
+}
+
+@keyframes fadeOut2{
+    100% { opacity:0;};
+    0% {opacity:1};
+}
+
+.contact-social {
+    position : static;
+    color: white;
+    transform: skew(0deg,0deg);
+}
+.contact-social ul li{
+    display: inline;
+    font-size:170%;
+}
+.contact-social ul {
+    margin-bottom:0;
+    margin-top:20px;
+}
+.contact-social a{
+    color:#373f42;
+    padding:0 10px;
+}
+.contact-social i {
+    font-size:90%;
+    transition : all .2s;
+}
+.contact-social li:hover i{
+    font-size:105%;
+    color:#2676ab;
+}
+/*--------ANIMATION FOR CONTACT SOCIAL LINKS--------*/
+@keyframes flash{
+    0%{opacity: 0.2; color:#2676ab; font-size:110%};
+    100%{opacity:1; color:#373f42; font-size: 100%};
+}
+
+.contact-details{
+    display: flex;
+    justify-content: center;
+}
+.contact-details ul{
+    margin-top:8px;
+    margin-bottom:25px;
+}
+.contact-details ul li{
+    position:relative;
+/*    left:50%;*/
+    display: flex;
+    font-size:80%;
+    margin-bottom: 5px;
+    
+/*    width:100%;*/
+/*    justify-content: center;*/
+}
+.contact-details ul li i{
+    width:50px;
+    font-size:110%;
+    color : #2676ab;
+    transition : all .2s;
+/*    margin-right:20px;*/
+}
+#contact-details ul li a{
+    font-size : 105% !important;
+    padding-left:0 !important;
+    color:rgba(0, 0, 0, 0.92);
+}
+
+
+/*-------------------------------------------------------*/
+
+/*
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+*/
+
+/*---------------QUERIES-----------------*/
+@media screen and (max-width:992px){
+    .fix-section,.scroll-section{
+        position:relative;
+    }
+    .sec2,.sec3,.sec7{
+        width:100%;
+    }
+    .sec4{ background : #c7c7c7}
+    .sec5{ background : #d2d2d2}
+    .sec6{ background : #c8c8c8}
+    
+}
+
+
+
